@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Drag N Drop Visual Form Builder</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag N Drop Visual Form Builder</title>
 </head>
+
 <body>
-  <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"  crossorigin="anonymous"></script>
-  <script src="v-assistant-builder.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"  crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="v-assistant-builder.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <script src="v-assistant-builder.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="v-assistant-builder.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <header>
+        <h2>Drag N Drop Visual Form Builder</h2>
+    </header>
+    <div class="wrapper">
+        <div id="builder"></div>
+        <button class="btn btn-success" id="btn-iniciar">Iniciar</button>
+    </div>
+
+    <script>
+        $("#btn-iniciar").click(function() {
+            const builder = new AssistantBuilder("builder");
+
+            builder.on('start', function () {
+            //make  modal draggable. This is optional
+            $('.modal-dialog').draggable({
+                handle: ".modal-header"
+            });
+
+        });
+
+        builder.start();
+    
+
+        })
 
 
-
-  <header>
-    <h2>Drag N Drop Visual Form Builder</h2>
-     </header>
-  <div class="wrapper">
-    <button class="btn btn-success" id="btn-iniciar">Iniciar</button>
-  </div>
-
-  <script>
-  $("#btn-iniciar").click(function(){
-    const builder = new AssistantBuilder();
-    builder.start();
-  })
-  </script>
+      
+    </script>
 </body>
+
 </html>
