@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "test": "jest",
-    "start": "webpack-dev-server --hot"
+    "start": "webpack && webpack-dev-server --hot"
   },
   "keywords": [],
   "author": "Daniel Melo Alencar",
