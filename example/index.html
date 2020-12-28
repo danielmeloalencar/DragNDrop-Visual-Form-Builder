@@ -10,7 +10,7 @@
 
 <body>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-    <script src="v-assistant-builder.min.js"></script>
+    <script src="v-assistant-builder-en.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="v-assistant-builder.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
@@ -38,7 +38,15 @@
                 handle: ".modal-header"
             });
 
-        });
+                   });
+
+        builder.on('save', function (conteudo) {
+          alert(conteudo);
+        })
+
+        builder.on('close', function (conteudo) {
+          alert("Fechou");
+        })
 
         builder.start();
     
