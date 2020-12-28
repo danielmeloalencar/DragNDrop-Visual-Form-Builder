@@ -1,7 +1,7 @@
 {
   "name": "DragNDrop-Visual-Form-Builder",
   "version": "1.0.0",
-  "description": "",
+  "description": "A script to build javascript form assistants visually",
   "main": "lib/v-assistant-builder.min.js",
   "scripts": {
     "build": "webpack",
@@ -9,7 +9,7 @@
     "start": "webpack-dev-server --hot"
   },
   "keywords": [],
-  "author": "",
+  "author": "Daniel Melo Alencar",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.3.4",
